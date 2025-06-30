@@ -1,0 +1,139 @@
+% ---
+% Inicia os apêndices
+% ---
+\begin{apendicesenv}
+
+% Imprime uma página indicando o início dos apêndices
+%\partapendices
+
+% ----------------------------------------------------------
+\chapter{Informações e Dicas \LaTeX}
+% ----------------------------------------------------------
+
+Este apêndice contém algumas dicas para escrita de um documento técnico em \LaTeX no formato ABNT.
+
+\section{Inserindo Citações}
+
+\textbf{Latex:}
+\begin{verbatim}
+Imagine que isso é um texto que necessita de uma citação
+\cite{Kasper:2014}. Talvez mais uma informação seja necessária
+\cite{Liu:2011}.
+\end{verbatim}
+
+\textbf{Resultado:}\\
+Imagine que isso é um texto que necessita de uma citação \cite{Kasper:2014}. Talvez mais uma informação seja necessária \cite{Liu:2011}.
+
+\section{Inserindo Equações}
+
+\textbf{Latex:}
+\begin{verbatim}
+\begin{equation}
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\end{equation}.
+\end{verbatim}
+
+\textbf{Resultado:}\\
+\begin{equation}
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\end{equation}.
+\newpage
+\section{Citando Equações}
+
+Para citar uma equação é necessário dar um nome pra equação (um label), no exemplo abaixo a equação foi rotulada de \textit{eq:cos2theta}:
+
+\textbf{Latex:}
+\begin{verbatim}
+\begin{equation}
+\label{eq:cos2theta}
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\end{equation}.
+
+Para citá-la apenas utilize o comando eqref. 
+
+Ex. Substituindo \eqref{eq:cos2theta} em...  
+\end{verbatim}
+
+
+
+\textbf{Resultado:}\\
+\begin{equation}
+\label{eq:cos2theta}
+\cos (2\theta) = \cos^2 \theta - \sin^2 \theta
+\end{equation}.
+
+Para citá-la apenas utilize o comando eqref. 
+
+Ex. Substituindo \eqref{eq:cos2theta} em... 
+
+\newpage
+\section{Inserindo Figuras}
+
+\subsection{Inserindo uma Figura}
+\textbf{Latex:}
+\begin{verbatim}
+\begin{figure}[htb]
+\caption{\label{fig:farol-da-barra}Farol da Barra}
+\begin{center}
+\includegraphics[width=0.7\linewidth]{./Figuras/farol-da-barra.jpg}
+\end{center}
+\legend{Fonte: os autores}
+\end{figure}
+\end{verbatim}
+
+\textbf{Resultado:}
+\begin{figure}[htb]
+	\caption{\label{fig:farol-da-barra}Farol da Barra}
+	\begin{center}
+		\includegraphics[width=0.7\linewidth]{./Figuras/farol-da-barra.jpg}
+	\end{center}
+	\legend{Fonte: os autores}
+\end{figure}
+
+Eu agora irei citar a Figura \ref{fig:farol-da-barra}
+
+\newpage
+\subsection{Inserindo Figuras Lado a Lado}
+
+\textbf{Latex:}
+\begin{verbatim}
+\begin{figure}[!htb]
+\label{teste}
+\centering
+\begin{minipage}{0.45\textwidth}
+\centering
+\caption{Imagem 1 da minipage} \label{fig:poli1}
+\includegraphics[width=1\linewidth]{./Figuras/poli1}
+\legend{Fonte: Produzido pelos autores}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+\centering
+\caption{Imagem 2 da minipage} \label{fig:poli2}
+\includegraphics[width=1\linewidth]{./Figuras/poli1}
+\legend{Fonte: o autor}
+\end{minipage}
+\end{figure}
+\end{verbatim}
+
+
+\textbf{Resultado:}
+\begin{figure}[!htb]
+	\label{teste}
+	\centering
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\caption{Imagem 1 da minipage} \label{fig:poli1}
+		\includegraphics[width=1\linewidth]{./Figuras/poli1}
+		\legend{Fonte: Produzido pelos autores}
+	\end{minipage}
+	\hfill
+	\begin{minipage}{0.45\textwidth}
+		\centering
+		\caption{Imagem 2 da minipage} \label{fig:poli2}
+		\includegraphics[width=1\linewidth]{./Figuras/poli1}
+		\legend{Fonte: o autor}
+	\end{minipage}
+\end{figure}
+
+\end{apendicesenv}

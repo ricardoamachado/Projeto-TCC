@@ -1,0 +1,85 @@
+\documentclass{CCEE_UFBA_Class}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	Arquivo criado pelo CCEE utilizando
+%   como base a classe AbnTeX2.
+%   Autores: André Tahim e Cristiane Paim
+%	Universidade Federal da Bahia
+%	Escola Politécnica
+%   Deptº de Eng. Elétrica e de Computação
+%	07/01/2021
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% ---
+% Informações de dados para CAPA e FOLHA DE ROSTO
+% -------------------------------------------------------------------------------
+\titulo{Título do Projeto de TCC}
+\autor{Ricardo Augusto de Araújo Machado}
+\orientador{Orientador: Prof. Dr. André Pires Nóbrega Tahim}
+%\coorientador{Coorientador: Prof. Dr. Y} % Comente se nao existir.
+\local{Salvador-Ba -- Brasil}
+\data{2025}
+\tipotrabalho{Relatório técnico}
+% -------------------------------------------------------------------------------
+
+
+\begin{document}
+	
+% Seleciona o idioma do documento (conforme pacotes do babel)
+%\selectlanguage{english}
+\selectlanguage{brazil}
+
+% Retira espaço extra obsoleto entre as frases.
+\frenchspacing 
+
+% ----------------------------------------------------------
+% ELEMENTOS PRÉ-TEXTUAIS
+% ----------------------------------------------------------
+% \pretextual
+
+% ---
+% Capa
+% ---
+\imprimircapa
+
+% ---
+% Folha de rosto
+% (o * indica que haverá a ficha bibliográfica)
+% ---
+%\imprimirfolhaderosto*
+% ---
+\cleardoublepage
+% ---
+% inserir o sumario
+% ---
+\pdfbookmark[0]{\contentsname}{toc}
+\tableofcontents*
+\cleardoublepage
+% ---
+
+
+% ----------------------------------------------------------
+% ELEMENTOS TEXTUAIS
+% ----------------------------------------------------------
+\textual
+	
+%%%%%%%%%%%%%%
+%	CAPÍTULOS
+%%%%%%%%%%%%%%
+\input{./capitulo1.tex}
+\input{./capitulo2.tex}
+\input{./capitulo3.tex}
+\input{./capitulo4.tex}
+\input{./capitulo5.tex}
+\input{./capitulo6.tex}
+
+% ----------------------------------------------------------
+% ELEMENTOS PÓS-TEXTUAIS
+% ----------------------------------------------------------
+\postextual
+
+\bibliographystyle{./Auxiliares/abntex2-alf}
+\bibliography{./Auxiliares/ref-TCC}
+
+%\input{./apendices.tex}
+
+\end{document}
