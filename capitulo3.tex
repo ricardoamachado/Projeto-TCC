@@ -12,6 +12,18 @@ realizados. Recomenda-se realizar uma revisão bibliográfica com os seguintes p
 \end{enumerate}
 
 Em relação ao retificador PFC trifásico, tanto \cite{3phPlecs} quanto \cite{WANG2013/03} 
-realizam o controle desse conversor por meio da transformada de Park.  Nessa metodologia, há 
-duas malhas de controle, uma externa, referente a tensão de saída do retificador e uma interna,
- que controla as componentes de eixo direto e em quadratura da corrente de entrada.
+realizam o controle do conversor CA-CC por meio da transformada de Park. Nessa metodologia,
+um \textit{Phase Locked Loop} (PLL) captura a referência de fase da tensão de entrada, que em seguida
+ é utilizada na transformação para o sistema de coordenadas dq0.Ademais, duas malhas de controle, uma externa, referente à tensão de saída do retificador e uma interna,
+ que controla as componentes de eixo direto e em quadratura da corrente de entrada. Como o objetivo é
+ controlar o fator de potência, a componente de corrente em quadratura é ajustada para ser nula,
+
+ Conforme a figura \ref{fig:controlepfc3ph}, o controle do PFC trifásico 
+
+ \begin{figure}
+ 	\centering
+	\caption{Esquema de controle do PFC trifásico.}
+	\includegraphics[width=0.8\textwidth]{./Figuras/controlepfc3ph.png}
+	\legend{Fonte: \cite{3phPlecs}.}
+	\label{fig:controlepfc3ph}
+ \end{figure}
