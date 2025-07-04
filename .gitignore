@@ -47,3 +47,5 @@ build/
 TCC_CCEE.aux
 *.log
 Figuras/poli1.jpg
+*.xcf
+Figuras/diagrama_veiculo_eletrico.jpeg
