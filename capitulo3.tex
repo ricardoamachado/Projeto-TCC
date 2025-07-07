@@ -25,9 +25,16 @@ isolação.
 
 %% Seção sobre o PFC.
 %TODO: Escrever sobre o controle do Boost PFC monofásico nos dois modos de condução.
-Os \textit{application notes} \cite{} e \cite{} apresentam uma visão geral sobre o controle do
-fator de potência ativo com um conversor boost monofásico. Esse conversor pode operar tanto em
-modo de condução contínua (CCM) quanto em modo de condução crítica (CRM). Em CCM, o controle é
+Os \textit{application notes} \cite{onsemi_hbd853} e \cite{ti_zhcp224} apresentam uma visão
+geral sobre o controle do fator de potência ativo com um conversor boost monofásico. Esse
+conversor pode operar tanto em modo de condução contínua (CCM) quanto em modo de condução
+crítica (CRM). Em CCM, o conversor é controlado através do controle pelo modo de corrente
+média. Nesse cenário, a malha de controle externa é lenta e tem o papel de ajustar o valor de
+tensão de saída enquanto que a malha de controle de corrente(interna) é mais rápida e visa
+fazer com que a corrente média do indutor siga a forma de onda de uma entrada de referência
+senoidal que esteja em fase com a tensão da rede. Já a operação em CRM é adequada apenas para
+uma potência de saída abaixo de 300 W e caracteriza-se pelo controle através de um sinal PWM
+com frequência de cheaveamento variável e tempo ON constante.
 
 Em relação ao retificador PFC trifásico, tanto \cite{3phPlecs} quanto \cite{WANG2013/03}
 realizam o controle do conversor CA-CC por meio da transformada de Park. Nessa metodologia, um
