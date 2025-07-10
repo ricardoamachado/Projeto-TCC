@@ -1,13 +1,21 @@
 \chapter{Solução e Avaliação da Proposta}
 \section{Solução Proposta}
-Esta seção é destinada a explicação de como você resolverá o problema, ou como você pretende
-realizar o projeto. Neste estágio é preciso estar claro o que você irá fazer, mas flexível o
-suficiente para adaptar a solução a adversidades encontradas durante a realização do projeto. A
-escrita da proposta da solução não o previne do insucesso, mas permite que você identifique
-diversos problemas com antecedência. Note que a metodologia descrita aqui é dependente do tipo
-de projeto do seu TCC. Você deve discutir com seu orientador sobre isso.
 
-Conforme a Figura \ref{fig:controlepfc3ph}, o controle do PFC trifásico
+%TODO: Inserir figura.
+A solução proposta nesse trabalho de conclusão de curso é o projeto de um carregador
+\textit{onboard} trifásico que seja projetado para operar na rede elétrica presente nas
+principais cidades brasileiras, com tensão de fase de \(127\ V_\mathrm{rms}\). A primeira etapa
+do trabalho consiste no projeto de um retificador trifásico PFC em ponte completa visto na
+figura e seu respectivo sistema de controle. A segunda etapa é relativa ao estudo teórico e
+projeto do conversor \textit{Phase Shifted Full Bridge} e do conversor \textit{Dual Active
+    Bridge}. O objetivo é comparar os dois conversores em termos de desempenho e complexidade de
+projeto. Ademais, o DAB é também projetado para obter um carregador elétrico bidirecional.
+
+Conforme a Figura \ref{fig:controlepfc3ph}, o controle do PFC trifásico apresenta uma malha
+externa de tensão, que compara a tensão de saída do retificador com uma referência de tensão
+CC. A saída do controlador de tensão é utilizada como referência para a componente de eixo
+direto da corrente, enquanto que a referência da corrente em quadratura é nula, para garantir o
+fator de potência unitário.
 
 \begin{figure}
     \centering
