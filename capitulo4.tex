@@ -6,28 +6,54 @@ A solução proposta nesse trabalho de conclusão de curso é o projeto de um ca
 \textit{onboard} trifásico que seja projetado para operar na rede elétrica presente nas
 principais cidades brasileiras, com tensão de fase de \(127\ V_\mathrm{rms}\). A primeira etapa
 do trabalho consiste no projeto de um retificador trifásico PFC em ponte completa visto na
-Figura e seu respectivo sistema de controle. A segunda etapa é relativa ao estudo teórico e
-projeto do conversor \textit{Phase Shifted Full Bridge} e do conversor \textit{Dual Active
-    Bridge}. O objetivo é comparar os dois conversores em termos de desempenho e complexidade de
-projeto. Ademais, o DAB é também projetado para obter um carregador elétrico bidirecional. Por fim,
-será realizado a integração do estágio de retificação com o conversor CC-CC para avaliar o
-desempenho completo do carregador.
+Figura \ref{fig:pfc_trifasico_diagrama} e seu respectivo sistema de controle. A segunda etapa é
+relativa ao estudo teórico e projeto do conversor \textit{Phase Shifted Full Bridge} (Fig.
+\ref{fig:conversor_fsfb}) e do conversor \textit{Dual Active Bridge} (Fig.
+\ref{fig:conversor_dab}). O objetivo é comparar os dois conversores em termos de desempenho e
+complexidade de projeto. Ademais, o DAB é também projetado para obter um carregador elétrico
+bidirecional. Por fim, será realizado a integração do estágio de retificação com o conversor
+CC-CC para avaliar o desempenho completo do carregador.
 
-%TODO: Inserir figuras dos conversores CC-CC
+\begin{figure}[htb]
+    \centering
+    \caption{Retificador PFC trifásico escolhido para o projeto.}
+    \includegraphics[width=0.7\textwidth]{./Figuras/PFC_Trifasico_Inkscape.pdf}
+    \legend{Fonte: Autoral}
+    \label{fig:pfc_trifasico_diagrama}
+\end{figure}
+
+\begin{figure}[h]
+    \centering
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Conversor Phase Shifted Full Bridge.}
+        \includegraphics[width=\textwidth]{./Figuras/ConversorPSFB.png}
+        \legend{Fonte: \cite{Infineon_CoolMOS_CFD7A}}
+        \label{fig:conversor_psfb}
+    \end{minipage}
+    \hfill
+    \begin{minipage}{0.45\textwidth}
+        \centering
+        \caption{Conversor Dual Active Bridge.}
+        \includegraphics[width=\textwidth]{./Figuras/ConversorDAB.png}
+        \legend{Fonte: \cite{Infineon_CoolMOS_CFD7A}}
+        \label{fig:conversor_dab}
+    \end{minipage}
+\end{figure}
 
 Conforme a Figura \ref{fig:controlepfc3ph}, o controle do PFC trifásico apresenta uma malha
 externa de tensão, que compara a tensão de saída do retificador com uma referência de tensão
 CC. A saída do controlador de tensão é utilizada como referência para a componente de eixo
 direto da corrente, enquanto que a referência da corrente em quadratura é nula, para garantir o
-fator de potência unitário. A saída dos controladores de corrente equivale a tensão do indutor de
-entrada necessária para que as componentes de corrente sigam os seus respectivos valores de
-referência. Em seguida, as componentes de tensão no indutor passam por blocos somadores para obter o
-valor de referência para as componentes de tensão terminal do circuito no referencial da
-Transformada de Park. Por fim, as componentes de tensão terminal são transformadas para o
+fator de potência unitário. A saída dos controladores de corrente equivale a tensão do indutor
+de entrada necessária para que as componentes de corrente sigam os seus respectivos valores de
+referência. Em seguida, as componentes de tensão no indutor passam por blocos somadores para
+obter o valor de referência para as componentes de tensão terminal do circuito no referencial
+da Transformada de Park. Por fim, as componentes de tensão terminal são transformadas para o
 referencial \(\alpha \beta \) e são utilizadas como a entrada do modulador \textit{Space Vector
-PWM}.
+    PWM}.
 
-\begin{figure}
+\begin{figure}[h]
     \centering
     \caption{Esquema de controle do PFC trifásico.}
     \includegraphics[width=0.8\textwidth]{./Figuras/controlepfc3ph.png}
