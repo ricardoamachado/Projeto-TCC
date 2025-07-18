@@ -1,2 +1,34 @@
 \chapter{Resultados Preliminares}
-Este capítulo é facultativo! Caso o seu trabalho tenha alcançado algum resultado preliminar, ele deve ser incluído aqui. Deve-se destacar que para qualquer simulação (ou experimento) o aparato utilizado e os procedimentos seguidos para obtenção dos resultados devem ser detalhadamente apresentados. \emph{A descrição da sua simulação (ou experimento) deve conter informações suficientes para que o leitor possa repliclá-lo}. Frequentemente figuras bem elaborados conseguem condensar e dar uma ideia esclarecedora de como os resultados foram obtidos, tais como: fotos de bancada, diagrama de blocos, esquemáticos, fluxogramas, etc. É importante para qualquer engenheiro/pesquisador adquirir a habilidae de descrever/ilustrar a essência de como os resultados foram obtidos.
+
+O retificador PFC trifásico de ponte completa é simulado no PSIM com base nos parâmetros
+obtidos por \cite{tech_simulator_2020}, os quais são listados abaixo:
+
+\begin{itemize}
+    \item Tensão de linha: \quad \(V_\mathrm{ff} = 415\ \mathrm{V_{rms}}\)
+    \item Frequência da rede elétrica: \quad \(f = 60\ \mathrm{Hz}\)
+    \item Indutor de entrada: \quad \( L = 1\ \mathrm{mH}\)
+    \item Capacitor de saída: \quad \( L = 470\ \mathrm{\mu F}\)
+    \item Resistor de saída: \quad \( R = 6,4\ \mathrm{\Omega}\)
+\end{itemize}
+
+O diagrama de simulação do retificador PFC trifásico é visto na figura
+\ref{fig:diagrama_retificador_pfc}. As tensões e correntes das fases a,b,c obtidas na simulação
+são exibidas na figura \ref{fig:diagrama_tensoes_correntes}.
+
+\begin{figure}[h]
+    \centering
+    \caption{Diagrama de simulação do retificador PFC trifásico no PSIM.}
+    \includegraphics[width=0.8\textwidth]{figuras/Retificador3ph_PSIM.png}
+    \legend{Fonte: Autoral}
+    \label{fig:diagrama_retificador_pfc}
+\end{figure}
+
+\newpage
+
+\begin{figure}[h]
+    \centering
+    \caption{Gráfico das correntes e tensões da simulação do retificador PFC trifásico.}
+    \includegraphics[width=0.8\textwidth]{figuras/three_phase_plot.png}
+    \legend{Fonte: Autoral}
+    \label{fig:diagrama_tensoes_correntes}
+\end{figure}

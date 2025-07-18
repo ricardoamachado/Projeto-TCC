@@ -8,7 +8,7 @@ principais cidades brasileiras, com tensão de fase de \(127\ V_\mathrm{rms}\). 
 do trabalho consiste no projeto de um retificador trifásico PFC em ponte completa visto na
 Figura \ref{fig:pfc_trifasico_diagrama} e seu respectivo sistema de controle. A segunda etapa é
 relativa ao estudo teórico e projeto do conversor \textit{Phase Shifted Full Bridge} (Fig.
-\ref{fig:conversor_fsfb}) e do conversor \textit{Dual Active Bridge} (Fig.
+\ref{fig:conversor_psfb}) e do conversor \textit{Dual Active Bridge} (Fig.
 \ref{fig:conversor_dab}). O objetivo é comparar os dois conversores em termos de desempenho e
 complexidade de projeto. Ademais, o DAB é também projetado para obter um carregador elétrico
 bidirecional. Por fim, será realizado a integração do estágio de retificação com o conversor
@@ -51,8 +51,9 @@ referência. Em seguida, as componentes de tensão no indutor passam por blocos 
 obter o valor de referência para as componentes de tensão terminal do circuito no referencial
 da Transformada de Park. Por fim, as componentes de tensão terminal são transformadas para o
 referencial \(\alpha \beta \) e são utilizadas como a entrada do modulador \textit{Space Vector
-    PWM}. Para realização da Transformada de Park, é necessário o valor da frequência da rede elétrica, que pode ser obtida com um Phase Locked Loop (PLL). Nesse trabalho, o PLL será visto como uma caixa preta e não fará parte do escopo do projeto.
-
+    PWM}. Para realização da Transformada de Park, é necessário o valor da frequência da rede
+elétrica, que pode ser obtida com um Phase Locked Loop (PLL). Nesse trabalho, o PLL será visto
+como uma caixa preta e não fará parte do escopo do projeto.
 
 \begin{figure}[h]
     \centering
@@ -64,4 +65,7 @@ referencial \(\alpha \beta \) e são utilizadas como a entrada do modulador \tex
 
 \section{Avaliação da Solução}
 
-A avaliação da solução proposta será realizada através de simulações, em que serão avaliados o desempenho do carregador elétrico para a variação de carga e a variação da tensão de entrada. Ademais, será comparado o desempenho dos dois conversores CC-CC, o PSFB e o DAB, em termos de eficiência, complexidade de controle e desempenho.
+A avaliação da solução proposta será realizada através de simulações, em que serão avaliados o
+desempenho do carregador elétrico para a variação de carga e a variação da tensão de entrada.
+Ademais, será comparado o desempenho dos dois conversores CC-CC, o PSFB e o DAB, em termos de
+eficiência, complexidade de controle e desempenho.
