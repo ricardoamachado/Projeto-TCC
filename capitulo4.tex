@@ -51,7 +51,8 @@ referência. Em seguida, as componentes de tensão no indutor passam por blocos 
 obter o valor de referência para as componentes de tensão terminal do circuito no referencial
 da Transformada de Park. Por fim, as componentes de tensão terminal são transformadas para o
 referencial \(\alpha \beta \) e são utilizadas como a entrada do modulador \textit{Space Vector
-    PWM}.
+    PWM}. Para realização da Transformada de Park, é necessário o valor da frequência da rede elétrica, que pode ser obtida com um Phase Locked Loop (PLL). Nesse trabalho, o PLL será visto como uma caixa preta e não fará parte do escopo do projeto.
+
 
 \begin{figure}[h]
     \centering
@@ -62,6 +63,5 @@ referencial \(\alpha \beta \) e são utilizadas como a entrada do modulador \tex
 \end{figure}
 
 \section{Avaliação da Solução}
-Esta seção deve conter uma explicação de como será feita a avaliação da solução uma vez que ela
-estiver concluída. O método de avaliação é dependente do projeto e o seu orientador pode
-guiá-lo para a forma de avaliação mais adequada.
+
+A avaliação da solução proposta será realizada através de simulações, em que serão avaliados o desempenho do carregador elétrico para a variação de carga e a variação da tensão de entrada. Ademais, será comparado o desempenho dos dois conversores CC-CC, o PSFB e o DAB, em termos de eficiência, complexidade de controle e desempenho.
